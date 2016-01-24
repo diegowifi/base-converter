@@ -1,48 +1,108 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Base converter</title>
-</head>
-<body>
-	I want the number <input id="number" type="text"> in base 
-	<select id="from">
-	  <option value="2">2 (Binary)</option>
-	  <option value="3">3</option>
-	  <option value="4">4</option>
-	  <option value="5">5</option>
-	  <option value="6">6</option>
-	  <option value="7">7</option>
-	  <option value="8">8 (Octal)</option>
-	  <option value="9">9</option>
-	  <option value="10">10 (Decimal)</option>
-	  <option value="11">11</option>
-	  <option value="12">12</option>
-	  <option value="13">13</option>
-	  <option value="14">14</option>
-	  <option value="15">15</option>
-	  <option value="16">16 (Hexadecimal)</option> 
-	</select>
-	to be in base
-	<select id="to">
-	  <option value="2">2 (Binary)</option>
-	  <option value="3">3</option>
-	  <option value="4">4</option>
-	  <option value="5">5</option>
-	  <option value="6">6</option>
-	  <option value="7">7</option>
-	  <option value="8">8 (Octal)</option>
-	  <option value="9">9</option>
-	  <option value="10">10 (Decimal)</option>
-	  <option value="11">11</option>
-	  <option value="12">12</option>
-	  <option value="13">13</option>
-	  <option value="14">14</option>
-	  <option value="15">15</option>
-	  <option value="16">16 (Hexadecimal)</option>
-	</select> 
-	<button onclick="convert()">Submit</button>
-	<div id="answer"></div>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Base converter</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="bower_components/semantic/dist/semantic.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+		<h1 class="ui header">Base converter</h1>
+		<br/>
+    <div class="ui one column centered grid">
+      <div class="column centered row">
+        <div class="ui action input">
+          <input id="number" type="text" placeholder="Write a number">
+          <div class="ui compact selection dropdown select-width" tabindex="0">
+            <select id="from">
+              <option selected="" value="articles">From Base</option>
+              <option value="2">2 (Binary)</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8 (Octal)</option>
+              <option value="9">9</option>
+              <option value="10">10 (Decimal)</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16 (Hexadecimal)</option>
+            </select>
+            <i class="dropdown icon"></i><div class="text">From base</div>
+            <div class="menu transition hidden" tabindex="-1">
+              <div class="item active selected" data-value="articles">From Base</div>
+              <div class="item" data-value="2">2 (Binary)</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+              <div class="item" data-value="6">6</div>
+              <div class="item" data-value="7">7</div>
+              <div class="item" data-value="8">8</div>
+              <div class="item" data-value="9">9</div>
+              <div class="item" data-value="10">10 (Decimal)</div>
+              <div class="item" data-value="11">11</div>
+              <div class="item" data-value="12">12</div>
+              <div class="item" data-value="13">13</div>
+              <div class="item" data-value="14">14</div>
+              <div class="item" data-value="15">15</div>
+              <div class="item" data-value="16">16 (Hexadecimal)</div>
+            </div>
+          </div>
+          <div class="ui compact selection dropdown select-width" tabindex="0">
+            <select id="to">
+              <option selected="" value="articles">To base</option>
+              <option value="2">2 (Binary)</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8 (Octal)</option>
+              <option value="9">9</option>
+              <option value="10">10 (Decimal)</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16 (Hexadecimal)</option>
+            </select>
+            <i class="dropdown icon"></i><div class="text">To Base</div>
+            <div class="menu transition hidden" tabindex="-1">
+              <div class="item active selected" data-value="articles">To Base</div>
+              <div class="item" data-value="2">2 (Binary)</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+              <div class="item" data-value="6">6</div>
+              <div class="item" data-value="7">7</div>
+              <div class="item" data-value="8">8</div>
+              <div class="item" data-value="9">9</div>
+              <div class="item" data-value="10">10 (Decimal)</div>
+              <div class="item" data-value="11">11</div>
+              <div class="item" data-value="12">12</div>
+              <div class="item" data-value="13">13</div>
+              <div class="item" data-value="14">14</div>
+              <div class="item" data-value="15">15</div>
+              <div class="item" data-value="16">16 (Hexadecimal)</div>
+            </div>
+          </div>
+          <div type="submit" onclick="convert()" class="ui button green">Convert!</div>
+        </div>
+    	</div>      
+    </div>
 
-	<script src="script.js"></script>
-</body>
+    <div id="answer"> Hello, let's get started :)</div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/semantic/dist/semantic.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    $('.ui.dropdown').dropdown();
+    </script>
+  </body>
 </html>

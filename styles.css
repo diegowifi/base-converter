@@ -1,0 +1,37 @@
+body{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.select-width{
+	width:180px;
+}
+
+select option {
+    margin:40px;
+    background: #FFF;
+    color:#000;
+    text-shadow:0 1px 0 rgba(0,0,0,0.4);
+}
+
+h1.ui.header{
+	margin-top: 100px;
+	text-align: center; 
+}
+
+#answer{
+	color: #929292;
+	text-align: center;
+	font-size: 30px;
+	margin-top: 100px;
+}
+
+
+@media only screen and (min-width: 992px){
+
+	.ui.selection.dropdown .menu{
+		max-height: 30.17142857rem;
+	}
+
+}

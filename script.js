@@ -4,9 +4,9 @@ function convert(){
   var fromBase = document.getElementById('from').value;
   var toBase = document.getElementById('to').value;
 
-	var num = parseInt(str, fromBase);
+  var num = parseInt(str, fromBase);
   
-  document.getElementById('answer').innerHTML = "El número " + str + " escrito en base " + fromBase + " es igual a " + num.toString(toBase) + " en base " + toBase;
+  document.getElementById('answer').innerHTML = str + " in base " + fromBase + " is " + num.toString(toBase).fontcolor("#545454") + " in base " + toBase;
     
 }
 
