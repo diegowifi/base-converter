@@ -1,0 +1,20 @@
+{
+  "name": "base-converter",
+  "version": "0.0.0",
+  "homepage": "https://github.com/diegowifi/base-converter",
+  "authors": [
+    "Diego Ponce <diegoponce@outlook.com>"
+  ],
+  "description": "Convert from one base to another",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#~2.1.8"
+  }
+}
